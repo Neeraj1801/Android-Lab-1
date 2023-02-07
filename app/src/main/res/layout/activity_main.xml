@@ -64,6 +64,14 @@
         android:layout_gravity="center_vertical|center_horizontal"
         android:text="Radio Button"/>
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:paddingTop="10dp"
+        android:src="@drawable/logo_algonquin" />
+
     <ImageButton
         android:id="@+id/myImage"
         android:layout_width="match_parent"
