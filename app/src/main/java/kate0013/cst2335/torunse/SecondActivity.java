@@ -75,11 +75,11 @@ public class SecondActivity extends AppCompatActivity {
         String emailAddress=fromPrevious.getStringExtra("Email");
         binding.textView3.setText("Welcome back "+ emailAddress);
         binding.secondPageButton.setOnClickListener( click-> {
-            String phone=binding.editTextPhone.getText().toString();
+            String phoneNumber=binding.editTextPhone.getText().toString();
             editor.putString("PhoneNumber",binding.editTextPhone.getText().toString());
             editor.apply();
             Intent dial=new Intent(Intent.ACTION_DIAL);
-            dial.setData(Uri.parse("tel:"+phone));
+            dial.setData(Uri.parse("tel:"+phoneNumber));
             startActivity(dial);
         });
         Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
