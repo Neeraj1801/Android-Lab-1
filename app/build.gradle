@@ -5,7 +5,9 @@ plugins {
 android {
     namespace 'kate0013.cst2335.torunse'
     compileSdk 32
-
+    buildFeatures{
+        viewBinding true;
+    }
     defaultConfig {
         applicationId "kate0013.cst2335.torunse"
         minSdk 21
