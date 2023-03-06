@@ -23,7 +23,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import kate0013.cst2335.torunse.databinding.ActivitySecondBinding;
-
 public class SecondActivity extends AppCompatActivity {
 
     @Override
