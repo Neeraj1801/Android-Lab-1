@@ -9,6 +9,6 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="android:textColor">@color/my_text</item>
+        <item name="android:textColor">@color/my_primary</item>
     </style>
 </resources>
