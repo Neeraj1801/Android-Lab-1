@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="About"
+          android:id="@+id/aboutBtn"
+          app:showAsAction="never"/>
+    <item
+        android:id="@+id/deleteBtn"
+        android:icon="@drawable/delete"
+        android:title="Delete It!!!"
+        app:showAsAction="always"
+        />
+</menu>
