@@ -1,82 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/passwordTextView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Hello_Message"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_gravity="center_vertical|center_horizontal" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_message"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_gravity="center_vertical|center_horizontal" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="Write Something Here!!!!"
-        android:layout_gravity="center_vertical|center_horizontal"
+        android:text="Type in the name of the city:"
+        android:textSize="60px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Switch
-        android:id="@+id/mySwitch"
+    <Button
+        android:id="@+id/forecastButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:text="Switch me" />
-    <CheckBox
-        android:id="@+id/myCheckBox"
+        android:layout_marginTop="19dp"
+        android:text="GET FORECAST"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameField" />
+
+    <EditText
+        android:id="@+id/cityNameField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:text="Check me" />
-    <RadioButton
-        android:id="@+id/myRadioButton"
-        android:layout_width="wrap_content"
+        android:ems="10"
+        android:hint="Type City Name Here"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTextView" />
+
+    <TextView
+        android:id="@+id/temperatureTextView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:text="Radio Button"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Temp goes here"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forecastButton" />
+
+    <TextView
+        android:id="@+id/maximumTemperatureTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Max goes here"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/temperatureTextView"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureTextView" />
+
+    <TextView
+        android:id="@+id/minimumTemperatureTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Min goes here"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/maximumTemperatureTextView"
+        app:layout_constraintTop_toBottomOf="@+id/maximumTemperatureTextView" />
+
+    <TextView
+        android:id="@+id/humidityTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Humidity goes here "
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/minimumTemperatureTextView"
+        app:layout_constraintTop_toBottomOf="@+id/minimumTemperatureTextView" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:paddingTop="10dp"
-        android:src="@drawable/logo_algonquin" />
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="10dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidityTextView" />
 
-    <ImageButton
-        android:id="@+id/myImage"
+    <TextView
+        android:id="@+id/descriptionTextView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:paddingTop="10dp"
-        android:src="@drawable/logo_algonquin" />
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Description goes here"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
